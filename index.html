@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stopwatch</title>
+	<meta charset="UTF-8"/>
+	<script type="text/javascript" src="main.js"></script>
+	<style>
+	.button {
+		background-color: #0055FF;
+		border: none;
+		color: #FFFFFF;
+		padding: 20px;
+		text-align: center;
+		text-decoration: none;
+		font-size: 50px;
+		margin: 4px 2px;
+		border-radius: 20px;
+		outline: none;
+	}
+	#stopwatch {
+		text-align: center;
+		font-size: 120px;
+	}
+	</style>
+</head>
+<body onload="main();">
+	<div class="accelerometer" id="accelerometer-x" value="X: "></div>
+	<div class="accelerometer" id="accelerometer-y" value="Y: "></div>
+	<div class="accelerometer" id="accelerometer-z" value="Z: "></div>
+
+	<input type="button" class="button" id="arm-button" value="Arm"\>
+	<input type="button" class="button" id="countdown-button" value="Countdown"\>
+
+	<div id="stopwatch"></div>
+</body>
+</html>
