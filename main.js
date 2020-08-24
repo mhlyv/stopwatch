@@ -87,6 +87,12 @@ function countdown() {
 }
 
 function main() {
+	if (!window.DeviceMotionEvent) {
+		throw("devicemotion not supported");
+		alert("devicemotion not supported");
+		return false;
+	}
+
 	acceleration = false;
 	// window.addEventListener("devicemotion", motion);
 	document.getElementById("arm-button").addEventListener("click", arm_click);
