@@ -5,6 +5,10 @@
 	<meta charset="UTF-8"/>
 	<script type="text/javascript" src="main.js"></script>
 	<style>
+	/*accelerometer {
+		bottom: 20%;
+		position: fixed;
+	}*/
 	.button {
 		background-color: #0055FF;
 		border: none;
@@ -24,13 +28,18 @@
 	</style>
 </head>
 <body onload="main();">
-	<div class="accelerometer" id="accelerometer-x" value="X: "></div>
-	<div class="accelerometer" id="accelerometer-y" value="Y: "></div>
-	<div class="accelerometer" id="accelerometer-z" value="Z: "></div>
 
 	<input type="button" class="button" id="arm-button" value="Arm"\>
 	<input type="button" class="button" id="countdown-button" value="Countdown"\>
 
 	<div id="stopwatch"></div>
+
+	<!--
+	<div class="accelerometer">
+		<div id="accelerometer-x" value="X: "></div>
+		<div id="accelerometer-y" value="Y: "></div>
+		<div id="accelerometer-z" value="Z: "></div>
+	</div>
+	-->
 </body>
 </html>

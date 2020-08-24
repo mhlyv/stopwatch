@@ -3,11 +3,11 @@ var acceleration;
 
 function reload() {location.reload();}
 
-function motion(event) {
-	document.getElementById("accelerometer-x").innerHTML = "X: " + event.acceleration.x;
-	document.getElementById("accelerometer-y").innerHTML = "Y: " + event.acceleration.y;
-	document.getElementById("accelerometer-z").innerHTML = "Z: " + event.acceleration.z;
-}
+// function motion(event) {
+// 	document.getElementById("accelerometer-x").innerHTML = "X: " + event.acceleration.x;
+// 	document.getElementById("accelerometer-y").innerHTML = "Y: " + event.acceleration.y;
+// 	document.getElementById("accelerometer-z").innerHTML = "Z: " + event.acceleration.z;
+// }
 
 function check_acceleration(event) {
 	if (event.acceleration.z < acceleration_limit) acceleration = true;
@@ -88,7 +88,7 @@ function countdown() {
 
 function main() {
 	acceleration = false;
-	window.addEventListener("devicemotion", motion);
+	// window.addEventListener("devicemotion", motion);
 	document.getElementById("arm-button").addEventListener("click", arm_click);
 	document.getElementById("countdown-button").addEventListener("click", countdown);
 }
