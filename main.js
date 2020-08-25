@@ -87,13 +87,13 @@ function countdown() {
 }
 
 function main() {
-	if (!window.DeviceMotionEvent) {
-		throw("devicemotion not supported");
+	if (window.DeviceMotionEvent) {
+		acceleration = false;
+		document.getElementById("arm-button").addEventListener("click", arm_click);
+		document.getElementById("countdown-button").addEventListener("click", countdown);
+	} else {
 		alert("devicemotion not supported");
+		throw("devicemotion not supported");
 		return false;
 	}
-
-	acceleration = false;
-	document.getElementById("arm-button").addEventListener("click", arm_click);
-	document.getElementById("countdown-button").addEventListener("click", countdown);
 }
